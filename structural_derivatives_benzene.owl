@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9"
+         xmlns="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9"/>
+
+<owl:Class rdf:about="#BenzeneStructuralDerivatives">
+  <rdfs:subClassOf rdf:resource="#ChemicalCompounds"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ChemicalCompounds">
+  <rdfs:subClassOf rdf:resource="#Continuants"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Continuants"/>
+
+<owl:Class rdf:about="#DNP">
+  <rdfs:subClassOf rdf:resource="#2,4-DinitrophenolStructuralDerivatives"/>
+</owl:Class>
+
+<owl:Class rdf:about="#2,4-DinitrophenolStructuralDerivatives">
+  <rdfs:subClassOf rdf:resource="#DinitrophenolStructuralDerivatives"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DinitrophenolStructuralDerivatives">
+  <rdfs:subClassOf rdf:resource="#PhenolStructuralDerivatives"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DNT">
+  <rdfs:subClassOf rdf:resource="#2,4-DinitrotolueneStructuralDerivatives"/>
+</owl:Class>
+
+<owl:Class rdf:about="#2,4-DinitrotolueneStructuralDerivatives">
+  <rdfs:subClassOf rdf:resource="#DinitrotolueneStructuralDerivatives"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DinitrotolueneStructuralDerivatives">
+  <rdfs:subClassOf rdf:resource="#TolueneStructuralDerivatives"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PhenolStructuralDerivatives">
+  <rdfs:subClassOf rdf:resource="#BenzeneStructuralDerivatives"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TolueneStructuralDerivatives">
+  <rdfs:subClassOf rdf:resource="#BenzeneStructuralDerivatives"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TNP">
+  <rdfs:subClassOf rdf:resource="#2,4,6-TrinitrophenolStructuralDerivatives"/>
+</owl:Class>
+
+<owl:Class rdf:about="#2,4,6-TrinitrophenolStructuralDerivatives">
+  <rdfs:subClassOf rdf:resource="#TrinitrophenolStructuralDerivatives"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TrinitrophenolStructuralDerivatives">
+  <rdfs:subClassOf rdf:resource="#PhenolStructuralDerivatives"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TNT">
+  <rdfs:subClassOf rdf:resource="#2,4,6-TrinitrotolueneStructuralDerivatives"/>
+</owl:Class>
+
+<owl:Class rdf:about="#2,4,6-TrinitrotolueneStructuralDerivatives">
+  <rdfs:subClassOf rdf:resource="#TrinitrotolueneStructuralDerivatives"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TrinitrotolueneStructuralDerivatives">
+  <rdfs:subClassOf rdf:resource="#TolueneStructuralDerivatives"/>
+</owl:Class>
+
+
+</rdf:RDF>
