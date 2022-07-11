@@ -1,78 +1,167 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-         xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xml:base="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9"
-         xmlns="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#">
-
-<owl:Ontology rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9"/>
-
-<owl:Class rdf:about="#BenzeneStructuralDerivatives">
-  <rdfs:subClassOf rdf:resource="#ChemicalCompounds"/>
-</owl:Class>
-
-<owl:Class rdf:about="#ChemicalCompounds">
-  <rdfs:subClassOf rdf:resource="#Continuants"/>
-</owl:Class>
-
-<owl:Class rdf:about="#Continuants"/>
-
-<owl:Class rdf:about="#DNP">
-  <rdfs:subClassOf rdf:resource="#2,4-DinitrophenolStructuralDerivatives"/>
-</owl:Class>
-
-<owl:Class rdf:about="#2,4-DinitrophenolStructuralDerivatives">
-  <rdfs:subClassOf rdf:resource="#DinitrophenolStructuralDerivatives"/>
-</owl:Class>
-
-<owl:Class rdf:about="#DinitrophenolStructuralDerivatives">
-  <rdfs:subClassOf rdf:resource="#PhenolStructuralDerivatives"/>
-</owl:Class>
-
-<owl:Class rdf:about="#DNT">
-  <rdfs:subClassOf rdf:resource="#2,4-DinitrotolueneStructuralDerivatives"/>
-</owl:Class>
-
-<owl:Class rdf:about="#2,4-DinitrotolueneStructuralDerivatives">
-  <rdfs:subClassOf rdf:resource="#DinitrotolueneStructuralDerivatives"/>
-</owl:Class>
-
-<owl:Class rdf:about="#DinitrotolueneStructuralDerivatives">
-  <rdfs:subClassOf rdf:resource="#TolueneStructuralDerivatives"/>
-</owl:Class>
-
-<owl:Class rdf:about="#PhenolStructuralDerivatives">
-  <rdfs:subClassOf rdf:resource="#BenzeneStructuralDerivatives"/>
-</owl:Class>
-
-<owl:Class rdf:about="#TolueneStructuralDerivatives">
-  <rdfs:subClassOf rdf:resource="#BenzeneStructuralDerivatives"/>
-</owl:Class>
-
-<owl:Class rdf:about="#TNP">
-  <rdfs:subClassOf rdf:resource="#2,4,6-TrinitrophenolStructuralDerivatives"/>
-</owl:Class>
-
-<owl:Class rdf:about="#2,4,6-TrinitrophenolStructuralDerivatives">
-  <rdfs:subClassOf rdf:resource="#TrinitrophenolStructuralDerivatives"/>
-</owl:Class>
-
-<owl:Class rdf:about="#TrinitrophenolStructuralDerivatives">
-  <rdfs:subClassOf rdf:resource="#PhenolStructuralDerivatives"/>
-</owl:Class>
-
-<owl:Class rdf:about="#TNT">
-  <rdfs:subClassOf rdf:resource="#2,4,6-TrinitrotolueneStructuralDerivatives"/>
-</owl:Class>
-
-<owl:Class rdf:about="#2,4,6-TrinitrotolueneStructuralDerivatives">
-  <rdfs:subClassOf rdf:resource="#TrinitrotolueneStructuralDerivatives"/>
-</owl:Class>
-
-<owl:Class rdf:about="#TrinitrotolueneStructuralDerivatives">
-  <rdfs:subClassOf rdf:resource="#TolueneStructuralDerivatives"/>
-</owl:Class>
+<rdf:RDF xmlns="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#"
+     xml:base="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9"/>
+    
 
 
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#DNP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#DNP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#2,4-DinitrophenolStructuralDerivatives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#DNT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#DNT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#2,4-DinitrotolueneStructuralDerivatives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#DinitrophenolStructuralDerivatives -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#DinitrophenolStructuralDerivatives">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#PhenolStructuralDerivatives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#DinitrotolueneStructuralDerivatives -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#DinitrotolueneStructuralDerivatives">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#toluene_structural_derivative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#PhenolStructuralDerivatives -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#PhenolStructuralDerivatives">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#benzene_structural_derivative"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It deserves careful thought (without dissolving into sophistry) about whether a structural derivative of phenol is a type of structural derivative of benzene without because a phenol is a structural derivative of benzene.</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">structural derivative of phenol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#TNP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#TNP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#2,4,6-TrinitrophenolStructuralDerivatives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#TNT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#TNT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#2,4,6-TrinitrotolueneStructuralDerivatives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#TrinitrophenolStructuralDerivatives -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#TrinitrophenolStructuralDerivatives">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#PhenolStructuralDerivatives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#TrinitrotolueneStructuralDerivatives -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#TrinitrotolueneStructuralDerivatives">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#toluene_structural_derivative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#benzene_structural_derivative -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#benzene_structural_derivative">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#chemical_compound"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Where is the &quot;benzene&quot; class? 
+I imagine that &quot;Benzene Strucural Derivative&quot; stands in relation to &quot;Benzene&quot;</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">structural derivative of benzen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#chemical_compound -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#chemical_compound">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#continuant"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical compound</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#continuant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#continuant"/>
+    
+
+
+    <!-- http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#toluene_structural_derivative -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#toluene_structural_derivative">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#benzene_structural_derivative"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">structural derivative of toluene</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#2,4,6-TrinitrophenolStructuralDerivatives -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#2,4,6-TrinitrophenolStructuralDerivatives">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#TrinitrophenolStructuralDerivatives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#2,4,6-TrinitrotolueneStructuralDerivatives -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#2,4,6-TrinitrotolueneStructuralDerivatives">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#TrinitrotolueneStructuralDerivatives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#2,4-DinitrophenolStructuralDerivatives -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#2,4-DinitrophenolStructuralDerivatives">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#DinitrophenolStructuralDerivatives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#2,4-DinitrotolueneStructuralDerivatives -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#2,4-DinitrotolueneStructuralDerivatives">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stefan/ontologies/2022/6/untitled-ontology-9#DinitrotolueneStructuralDerivatives"/>
+    </owl:Class>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
