@@ -56,30 +56,33 @@ print("The query onto.phenol.get_properties() fails because the method assumes a
 # About the variable names:
 # I worked through these in reverse alphabetical order
 
-# print(list(default_world.sparql("""
-# SELECT (COUNT(?x) AS ?nb)
-# { ?x a owl:Class . }
-# """)))
-# prints 19
+sparql_query = list(default_world.sparql("""
+SELECT (COUNT(?x) AS ?nb)
+{ ?x a owl:Class . }
+"""))[0][0]
 
+print(f'\t4. How many classes are there? Owlready: {len(list(onto.classes()))}. SPARQL: {sparql_query}.')
 
-# count_of_classes = list(default_world.sparql("""
-#                SELECT (COUNT(DISTINCT ?x) AS ?nb)
-#                { ?x a owl:Class.}
-#         """))[0][0]
+query = default_world.sparql("""
+    SELECT ?s
+    { ?s ?v ?o . 
+      ?o rdfs:label 'phenol' .
+      ?v rdfs:label 'is structural derivative of'}
+    """) #Pay attention to single and double quotes
+print(f'\t5. What substances are a structural derivative of phenol? Ans:{list(query)}')
+print('\t\tThe list is empty because the ontology uses the SOME restriction.')
+print('\t\tThe semantics of our query are more accurately expressed by:')
+print('\t\tWhat substances CAN BE CONSIDERED a structural derivative of phenol?')
 
-# print(count_of_classes)
-# prints 19
-
-# Syntactic features:
-# 1. only the default_world.sparql function understands SPARQL strings. default_world
-#  is a base class loaded with the command "from owlready2 import *".
-# 2. triple quotes surround the SPARQL query. Triple quotes enclose multi-line strings.
-# 3. curly braces surround the actual query.
-# 4. the final (in this case only) line of the actual query is terminate by a period
-# 5.  It's nested because the best practice for queries is to return a generators
-#  rather than a list to minimize memory usage.
-
+query = list(default_world.sparql("""
+    SELECT ?s
+    {
+        ?s rdfs:subClassOf [owl:onProperty ?v; owl:someValuesFrom/rdfs:subClassOf* ?o]
+        ?o rdfs:label 'phenol' . 
+        ?v rdfs:label 'is structural derivative of' 
+    }
+    """))
+print(f'\t\tTHIS WORKS: {[item[0].name for item in query]}')
 
 # c = list(default_world.sparql("""
 # SELECT ?s WHERE { is_structural_derivative_of ?v "phenol" }"""))
@@ -202,6 +205,7 @@ print("The query onto.phenol.get_properties() fails because the method assumes a
 #
 # print(r)
 # doesn't work
+## YOU MISUNDERSTAND HOW TO USE THE PROPERTY RESTRICTION SOME IN SPARQL. SEE MY WORKING EXAMPLE
 
 # s = list(default_world.sparql("""
 #            SELECT ?x
