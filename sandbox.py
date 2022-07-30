@@ -6,23 +6,28 @@
 from owlready2 import *
 import os
 
+get_names = lambda ontoQuery: ' '.join(item.name for item in ontoQuery)
+
 onto = get_ontology('file://structural_derivatives_benzene.owl').load()
 
-# print(onto.phenol.is_structural_derivative_of)
-# prints benzene. Does not print the inherited chemical_compound,
-# which is what we want
+print("Challenge Questions")
+query  = onto.phenol.is_structural_derivative_of
+print(f'\t1. What compound is phenol a direct structural derivative of? Ans:{get_names(query)}')
 
 # print(list(onto.properties()))
 # prints a list of properties in the ontology
 
-# print(list(onto.phenol.subclasses()))
-# prints subclasses of phenol, dinitrophenol and trinitrophenol
+query = onto.phenol.subclasses()
+print(f'\t2. What phenols does the ontology specify? Ans:{get_names(query)}')
 
+query = onto.phenol.is_a
 print(list(onto.phenol.is_a))
-# prints
-# benzene, is_structural_derivative_of.some(benzene),
-# has_part.min(1, hydroxyl_group)
-# but doesn't print chemical_compound
+print("This didn't print chemical_compound, because this is not asserted in the ontology.")
+""" prints
+    benzene, is_structural_derivative_of.some(benzene),
+    has_part.min(1, hydroxyl_group)
+    but doesn't print chemical_compound
+"""
 
 # print(list(onto.phenol.ancestors()))
 # prints benzene, chemical_compound, owl.Thing, phenol, continuant
@@ -33,14 +38,18 @@ print(list(onto.phenol.is_a))
 # I think this is what it captures in SparQL:
 # phenol is_structural_derivative_of some ?x
 
-# print(onto.phenol.INDIRECT_has_structural_derivative)
-# prints nothing
-# although has_structural_derivative is the inverse of
-# is_structural_derivative_of, it is not declared explicitly
+query = onto.phenol.INDIRECT_has_structural_derivative
+print(f'\t3. What compounds eventually have phenol as a structural derivative? Ans: {get_names(query)}')
+print("Prints nothing because OWL search looks only for explicitly declared relationships. It performs no reasoning.")
+"""
+  prints nothing
+    although has_structural_derivative is the inverse of
+    is_structural_derivative_of, it is not declared explicitly
+"""
 
-print(onto.phenol.get_properties())
+# print(onto.phenol.get_properties())
 # doesn't work
-
+print("The query onto.phenol.get_properties() fails because the method assumes an Individual not a Class.")
 
 # ====== Moving on to querying the ontology using sparql ======
 
